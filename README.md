@@ -12,7 +12,7 @@ Terdiri dari 6 tabel:
   6. Tabel obat
 
 # Desain Database
-..
+<img width="759" alt="db" src="https://user-images.githubusercontent.com/69449808/170464816-e1e002aa-dbf6-49a8-b27f-71d35b4c3e05.png">
 
 # Screenshoot Home
-![screencapture_1.png]( {https://github.com/amuslim12/tugas-5-SBD-20.D2/blob/main/screencapture_1.png} )
+<img width="539" alt="screencapture_1" src="https://user-images.githubusercontent.com/69449808/170464956-8139854b-63e2-4f65-9f9f-ac042790a81c.png">
