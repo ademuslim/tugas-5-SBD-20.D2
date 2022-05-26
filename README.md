@@ -18,4 +18,4 @@ Terdiri dari 6 tabel:
 <img width="539" alt="screencapture_1" src="https://user-images.githubusercontent.com/69449808/170464956-8139854b-63e2-4f65-9f9f-ac042790a81c.png">
 
 ### Full Page ###
-<img width="800" alt="screencapture_1" src="https://user-images.githubusercontent.com/69449808/170467832-81129051-71fc-464b-8a95-561f60da1138.png">
+<img width="900" alt="screencapture_1" src="https://user-images.githubusercontent.com/69449808/170467832-81129051-71fc-464b-8a95-561f60da1138.png">
