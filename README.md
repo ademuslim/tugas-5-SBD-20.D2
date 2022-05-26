@@ -15,3 +15,4 @@ Terdiri dari 6 tabel:
 ..
 
 # Screenshoot Home
+![screencapture_1.png]( {https://github.com/amuslim12/tugas-5-SBD-20.D2/blob/main/screencapture_1.png} )
