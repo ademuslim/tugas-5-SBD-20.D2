@@ -16,4 +16,10 @@ if ($koneksi){
 }else{
     echo "MySQL tidak terhubung";
 }
+
+// if ($koneksi == false)
+// {
+//     echo "Koneksi ke server gagal.";
+//     die();
+// }
 ?>
