@@ -1,0 +1,44 @@
+Fungsi Mysql_query dalam PHP
+Fungsi mysql_query dalam PHP adalah untuk menjalankan perintah atau instruksi query ke database MySQL dimana mysql_query() merupakan sarana dasar yang akan menampung jenis query apapun di dalam nya. Jenis query tersebut yang dapat dijalankan di mysql_query() antara lain adalah INSERT, SELECT, UPDATE, dan DELETE atau dalam bahasa standar fitur sebuah program dikenal dengan istilah CRUD. Fungsi mysql_query dapat juga dikatakan sebagai fungsi untuk menampung sebuah perintah atau intruksi ke database MySQL baik dalam PHP atau bahasa pemrograman lain. Sampai disini apakah sudah ada gambaran terkait fungsi PHP dasar yaitu fungsi mysql_query ?.
+Penggunaan fungsi mysql_query dalam php hampir sama dengan fungsi php sejenisnya seperti mysql_connect() dan mysql_select_db(), sama-sama harus mengandung perintah atau instruksi di dalamannya. Instruksi di dalam fungsi mysql_query dapat juga berbentuk argumen dan query, jadi di dalam setiap mysql_query() harus ada argumen atau query. Semoga pernyataan ini tidak keliru! jika benar contoh dari argumen atau query di dalam query tersebut di antaranya adalah instruksi CRUD, SELECT, INSERT, UPDATE dan DELETE. Oke, contoh penggunaan mysql_query() akan segera kita bahas pada artikel ini dengan beberapa bentuk model, kondisi, dan tujuannya.
+
+Fungsi Mysql_query dalam PHP
+Sebelum melanjutkan pembahasan materi, kami sisipkan pembahasan menarik lain tentang fungsi mysql_num_rows pada php yang mungkin dapat menambah pengetahuan juga. Selanjutnya adalah bagaimana cara menggunakan mysql_query pada php berikut dengan penjelasan dari code dan penggunaan nya sehingga mudah untuk dipahami.
+
+Fungsi mysql_query dalam php tidak lepas dari instruksi atau perintah atau query dan argumen baik dalam mysql database atau mysqli_query di php7. Mysql_query() memiliki syntax dasar seperti berikut ini;
+
+codesource
+$query = mysql_query("INSTRUKSI");
+Atau seprti ini;
+
+codesource
+$query = mysql_query($koneksi, "INSTRUKSI");
+Kemudian bagaimana penggunaan fungsi mysql_query dalam php di mysqli yang berlaku untuk php 7, cukup dengan menambahkan huruf "i" menjadi mysqli_query() dan peletakan argumen harus di awal baris di dalam tanda kurung. Lebih jelasnya seperti syntax berikut ini;
+
+codesource
+$query = mysqli_query($koneksi, "INSTRUKSI");
+Berikut adalah penjelasan sederhana dari masing-masing elemen pada syntax fungsi mysql_query di atas mulai dari awal baris;
+
+$query adalah nama variabel yang akan menampung hasil dari fungsi mysql_query(), Jika fungsi mysql_query() berhasil dijalankan. Jika query gagal dijalankan, maka variabel ini akan berisi nilai boolean FALSE. Variabel $query ini bertipe resources.
+mysql_query atau mysqli_query adalah nama fungsi php untuk menjalankan instruksi atau argumen ke mysql.
+$koneksi adalah argumen dari fungsi mysql_query() dimana argumen ini diisi dengan variabel hasil pemanggilan fungsi mysql_connect() untuk koneksi kek database mysql. Argumen ini bersifat opsional, dan jika tidak dipakai maka PHP akan menggunakan variabel mysql_connect() yang sedang terkoneksi ke database.
+INSTRUKSI adalah argumen di dalam fungsi mysql_query() yang berbentuk query MySQL yang kemudian query ini akan dikirim kepada MySQL Server untuk diproses. Argumen ini harus pertipe string dan mengikuti aturan penulisan string didalam PHP. Contoh query ini, misalnya "SELECT * FROM tb_pegawai", atau "CREATE DATABASE db_simpeg" atau "INSERT INTO tb_pegawai (nama_field) VALUES ($value)", dan disinilah CRUD di eksekusi.
+Sampai tahap ini semoga teman-taman sudah paham tentang fungsi mysql_query dalam php, selanjutnya adalah baimana cara menjalankan query mysql dari php. Agar dapat memahami cara penggunaan fungsi mysql_query() sebaiknya langsung saja melihat contoh penulisan code atau coding. Berikut adalah contoh coding program penulisan fungsi mysql_query dalam php;
+
+codesource
+$query="SELECT * FROM tb_pegawai WHERE status='PNS'";
+$result=mysql_query($query);
+Namun coding di atas terlihat tidak efektif, tidak efisian waktu dan boros, bagimana kalo kita rubah namun tidak merubah hasil INSTRUKSI nya? Jadi seperti ini;
+
+codesource
+$query=mysql_query("SELECT * FROM tb_pegawai WHERE status='PNS'");
+Bagaimana? lebih simple bukan. Kemudian untuk menampilkan data dari query tersebut bagaimana? kita dapat menampungnya dalam array menggunakan fungsi mysql_fetch_array(). Sehingga coding nya menjadi seperti berikut ini;
+
+codesource
+$query=mysql_query("SELECT * FROM tb_pegawai WHERE status='PNS'");
+while($data=mysql_fetch_array($query)){
+    echo 'Hasil $data[0]';
+}
+Perlu kita ketahui bahwa fungsi mysql_query dalam php tidak hanya harus menggunakan mysql_fetch_array() untuk manampilkan hasil query nya. Kita dapat mengunakan mysql_num_rows() , mysql_fetch_row(), mysql_affected_rows(), dan masih banyak lainnya tentunya sesuai maksud dan tujuan. Meskipun untuk mencapai maksud dan tujuan yang sama, bisa saja mengunakan query yang berbeda, inilah ke-dinamisan dalam dunia pemrograman.
+
+Tutorial Fungsi Mysql_query Dalam PHP
