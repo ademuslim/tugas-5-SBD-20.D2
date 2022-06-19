@@ -8,7 +8,7 @@ $db = "klinik_312010147";
 $koneksi = mysqli_connect($host, $user, $pass, $db); //isi dgn 4 variable
 
 //Cek koneksi
-if ($koneksi == false)
+if ($koneksi == false) //Jika koneksi gagal
 {
     echo "Koneksi ke server gagal.";
     die();
